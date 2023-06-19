@@ -18,6 +18,7 @@ touch $1/README.md
 
 # create folders
 mkdir $1/data
+mkdir $1/data/0_raw
 mkdir $1/references
 mkdir $1/results
 mkdir $1/notebooks
