@@ -41,5 +41,5 @@ if __name__ == "__main__":
     # save the formatted phenotype input file
     outputFolder = Path("../data/1_formatted")
     outputFolder.mkdir(exist_ok=True)
-    phenotype_input.to_excel(outputFolder/"Hayles_2013_OB_formatted_phenotypes.excel", index=False)
+    phenotype_input.to_excel(outputFolder/"Hayles_2013_OB_formatted_phenotypes.xlsx", index=False)
 
