@@ -33,13 +33,10 @@ def main():
     # check the dispensability
     print("The dispensability categories for check: ",phenotype_input["Gene dispensability. This study"].value_counts(), sep="\n")
 
-    return phenotype_input
-
-if __name__ == "__main__":
-    phenotype_input = main()
-
     # save the formatted phenotype input file
     outputFolder = Path("../data/1_formatted")
     outputFolder.mkdir(exist_ok=True)
     phenotype_input.to_excel(outputFolder/"Hayles_2013_OB_formatted_phenotypes.xlsx", index=False)
 
+if __name__ == "__main__":
+    main()
