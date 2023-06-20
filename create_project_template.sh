@@ -26,6 +26,7 @@ mkdir $1/reports
 mkdir $1/tests
 mkdir $1/docs
 mkdir $1/src
+mkdir $1/tmp
 
 # Create a .gitignore file in the directory
 touch $1/.gitignore
@@ -34,7 +35,7 @@ touch $1/.gitignore
 echo "data/" >> $1/.gitignore
 echo "references/" >> $1/.gitignore
 echo "results/" >> $1/.gitignore
-
+echo "tmp" >> $1/.gitignore
 
 
 
