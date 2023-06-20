@@ -10,7 +10,7 @@ from pathlib import Path
 
 def main():
     # load the genes with one phenotype
-    genes_with_one_phenotype = pd.read_excel("../data/2_grouped_genes/Hayles_2013_OB_grouped_genes.xlsx", sheet_name="One basic phenotype")
+    genes_with_one_phenotype = pd.read_excel("../data/3_grouped_genes/Hayles_2013_OB_grouped_genes.xlsx", sheet_name="One basic phenotype")
 
     genes_with_one_phenotype["Category"] = genes_with_one_phenotype["Basic phenotype"].apply(category_one_phenotype)
 

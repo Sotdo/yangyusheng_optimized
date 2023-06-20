@@ -12,7 +12,7 @@ import pandas as pd
 
 def main():
     # load the genes with multi phenotypes
-    genes_with_multi_phenotypes = pd.read_excel("../data/2_grouped_genes/Hayles_2013_OB_grouped_genes.xlsx", sheet_name="Multi basic phenotypes")
+    genes_with_multi_phenotypes = pd.read_excel("../data/3_grouped_genes/Hayles_2013_OB_grouped_genes.xlsx", sheet_name="Multi basic phenotypes")
 
     genes_with_multi_phenotypes["Category"] = genes_with_multi_phenotypes["Basic phenotype"].apply(category_multi_phenotype)
 
