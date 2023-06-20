@@ -1,3 +1,4 @@
+# %%
 """
 This script will category the genes with one phenotype to different levels of growth phenotypes.
 """
@@ -55,10 +56,10 @@ def main():
     Classification_pivot = Classification_pivot[reordered_columns].sort_values(reordered_columns, ascending=False)
 
     # save the result
-    outputFolder = Path("../data/3_category_genes_with_one_phenotype")
+    outputFolder = Path("../data/3_categorized_genes")
     outputFolder.mkdir(exist_ok=True)
 
-    with pd.ExcelWriter("../data/3_category_genes_with_one_phenotype/Hayles_2013_OB_category_genes_with_one_phenotype.xlsx") as writer:
+    with pd.ExcelWriter(outputFolder/"Hayles_2013_OB_category_genes_with_one_phenotype.xlsx") as writer:
         genes_with_one_phenotype.to_excel(writer, sheet_name="One basic phenotype", index=False)
         Phenotypes_pivot.style.background_gradient(cmap="Blues", axis=1).to_excel(writer, sheet_name="Phenotypes pivot")
         Essentiality_pivot.style.background_gradient(cmap="Blues", axis=1).to_excel(writer, sheet_name="Essentiality pivot")
@@ -66,5 +67,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 # %%
