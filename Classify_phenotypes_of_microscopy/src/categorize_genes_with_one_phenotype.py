@@ -26,7 +26,7 @@ def main():
     Classification_pivot = Classification_pivot[reordered_columns].sort_values(reordered_columns, ascending=False)
 
     # save the result
-    outputFolder = Path("../data/3_categorized_genes")
+    outputFolder = Path("../data/4_categorized_genes")
     outputFolder.mkdir(exist_ok=True)
 
     with pd.ExcelWriter(outputFolder/"Hayles_2013_OB_category_genes_with_one_phenotype.xlsx") as writer:

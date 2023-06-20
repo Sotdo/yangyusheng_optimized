@@ -55,7 +55,7 @@ def main():
 
 
     # output the results into three sheets in one excel file
-    outputFolder = Path("../data/2_grouped_genes")
+    outputFolder = Path("../data/3_grouped_genes")
     outputFolder.mkdir(exist_ok=True)
 
     with pd.ExcelWriter(outputFolder/"Hayles_2013_OB_grouped_genes.xlsx") as writer:
