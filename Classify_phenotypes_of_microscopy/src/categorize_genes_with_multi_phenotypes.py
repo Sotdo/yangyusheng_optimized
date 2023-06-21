@@ -32,7 +32,7 @@ def main():
     outputFolder.mkdir(exist_ok=True)
 
     with pd.ExcelWriter(outputFolder/"Hayles_2013_OB_category_genes_with_multi_phenotypes.xlsx") as writer:
-        genes_with_multi_phenotypes.to_excel(writer, sheet_name="One basic phenotype", index=False)
+        genes_with_multi_phenotypes.to_excel(writer, sheet_name="Multi basic phenotypes", index=False)
         Phenotypes_pivot.style.background_gradient(cmap="Blues", axis=1).to_excel(writer, sheet_name="Phenotypes pivot")
         Essentiality_pivot.style.background_gradient(cmap="Blues", axis=1).to_excel(writer, sheet_name="Essentiality pivot")
         Classification_pivot.style.background_gradient(cmap="Blues", axis=1).to_excel(writer, sheet_name="Classification pivot")
