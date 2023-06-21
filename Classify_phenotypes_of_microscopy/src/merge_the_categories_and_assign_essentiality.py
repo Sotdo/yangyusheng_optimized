@@ -12,4 +12,12 @@ genes_with_inconsistent_phenotypes = pd.read_excel("../data/4_categorized_genes/
 # concat the categories of all genes
 all_genes_with_categories = pd.concat([genes_with_one_phenotype, genes_with_multi_phenotypes, genes_with_inconsistent_phenotypes], ignore_index=True)
 
+simplified_results = all_genes_with_categories.drop(columns=['Basic phenotype', 'Additional phenotype', 'Category_25', 'Category_32'])
+
+# save the results
+outputFolder = Path("../data/5_merged_categories")
+outputFolder.mkdir(exist_ok=True)
+
+with pd.ExcelWriter(outputFolder/"Hayles_2013_OB_merged_categories.xlsx") as writer:
+    simplified_results.to_excel(writer, sheet_name="All genes", index=False)
 # %%
