@@ -42,7 +42,7 @@ def category_one_phenotype(phenotype):
     elif ("germinated" in phenotype) and ("spores" in phenotype) and (("divide" not in phenotype) and ("division" not in phenotype)):
         return "germinated"
     elif ("germinated" in phenotype) and ("spores" in phenotype) and (("divide" in phenotype) or ("division" in phenotype)):
-        return "germinated_and_divided"
+        return "germinated and divided"
     elif "microcolonies" in phenotype:
         return "microcolonies"
     elif ("very small colonies" in phenotype):
