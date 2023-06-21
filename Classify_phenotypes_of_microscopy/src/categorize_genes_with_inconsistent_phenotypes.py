@@ -6,6 +6,8 @@ Previous work has manually checked the inconsistent phenotypes and categorized t
 # import pyforest
 # print(pyforest.active_imports())
 
+from pathlib import Path
+
 import pandas as pd
 
 genes_with_inconsistent_phenotypes = pd.read_excel("../data/3_grouped_genes/Hayles_2013_OB_grouped_genes.xlsx", sheet_name="Inconsistent phenotypes")
