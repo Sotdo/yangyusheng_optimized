@@ -20,7 +20,7 @@ def main():
     Classification_pivot = pivot_analysis_of_the_categories(genes_with_one_phenotype, "Phenotypic classification used for analysis", "Category")
 
     # reorder the columns
-    reordered_columns = ["spores", "germinated", "germinated_and_divided", "microcolonies", "very small colonies", "small colonies", "WT"]
+    reordered_columns = ["spores", "germinated", "germinated and divided", "microcolonies", "very small colonies", "small colonies", "WT"]
     Phenotypes_pivot = Phenotypes_pivot[reordered_columns].sort_values(reordered_columns, ascending=False)
     Essentiality_pivot = Essentiality_pivot[reordered_columns].sort_values(reordered_columns, ascending=False)
     Classification_pivot = Classification_pivot[reordered_columns].sort_values(reordered_columns, ascending=False)
