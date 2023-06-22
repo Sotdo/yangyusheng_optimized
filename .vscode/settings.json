@@ -1,4 +1,6 @@
 {
     "python.analysis.autoImportCompletions": true,
-    "jupyter.interactiveWindow.textEditor.executeSelection": true
+    "jupyter.interactiveWindow.textEditor.executeSelection": true,
+    "path-intellisense.autoSlashAfterDirectory": true,
+    "path-intellisense.autoTriggerNextSuggestion": true
 }
