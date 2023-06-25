@@ -2,7 +2,10 @@
 This script will merge the categories of all genes.
 """
 # %%
-import pyforest
+# import pyforest
+
+from pathlib import Path
+import pandas as pd
 
 # load data
 genes_with_one_phenotype = pd.read_excel(
@@ -38,4 +41,16 @@ outputFolder.mkdir(exist_ok=True)
 
 with pd.ExcelWriter(outputFolder / "Hayles_2013_OB_merged_categories.xlsx") as writer:
     simplified_results.to_excel(writer, sheet_name="All genes", index=False)
+
+    simplified_results.value_counts("Consistency at temperatures").rename(
+        "Count"
+    ).to_excel(writer, sheet_name="Consistency at temperatures")
+
+    simplified_results.value_counts("One or multi basic phenotypes").rename(
+        "Count"
+    ).to_excel(writer, sheet_name="One or multi basic phenotypes")
+
+    simplified_results.value_counts("Category").rename("Count").to_excel(
+        writer, sheet_name="Category"
+    )
 # %%
