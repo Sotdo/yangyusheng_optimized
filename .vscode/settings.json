@@ -3,7 +3,9 @@
     "jupyter.interactiveWindow.textEditor.executeSelection": true,
     "path-intellisense.autoSlashAfterDirectory": true,
     "path-intellisense.autoTriggerNextSuggestion": true,
-    "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.formatOnSave": true,
-    "python.formatting.provider": "black"
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true
+    },
+    "python.formatting.provider": "none"
 }
