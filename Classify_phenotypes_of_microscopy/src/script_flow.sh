@@ -20,4 +20,4 @@ python categorize_genes_with_inconsistent_phenotypes.py
 python merge_the_categories_and_assign_essentiality.py
 
 # move final results to the results folder for source control
-mv ../data/5_merged_categories/Hayles_2013_OB_merged_categories.xlsx ../results
+cp ../data/5_merged_categories/Hayles_2013_OB_merged_categories.xlsx ../results
