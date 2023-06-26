@@ -34,8 +34,7 @@ touch $1/.gitignore
 # Add the following lines to the .gitignore file
 echo "data/" >> $1/.gitignore
 echo "references/" >> $1/.gitignore
-echo "results/" >> $1/.gitignore
-echo "tmp" >> $1/.gitignore
+echo "tmp/" >> $1/.gitignore
 
 
 
