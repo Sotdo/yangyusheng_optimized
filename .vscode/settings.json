@@ -3,12 +3,4 @@
     "jupyter.interactiveWindow.textEditor.executeSelection": true,
     "path-intellisense.autoSlashAfterDirectory": true,
     "path-intellisense.autoTriggerNextSuggestion": true,
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnSave": true
-    },
-    "python.formatting.provider": "black",
-    "editor.defaultFoldingRangeProvider": "ms-python.black-formatter",
-    "editor.formatOnSave": true,
-    "notebook.formatOnSave.enabled": true
 }
