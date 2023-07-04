@@ -1,0 +1,11 @@
+rule fastp_trim_seq:
+    input:
+        "data/0_raw/LD_NSKY1328-7-1-spore_NSK-1009_diploid_1.fq.gz"
+    output:
+        trimmed="data/1_trimmed/LD_NSKY1328-7-1-spore_NSK-1009_diploid_1.fq.gz",
+        report_html="data/1_trimmed/LD_NSKY1328-7-1-spore_NSK-1009_diploid_1.html",
+        report_json="data/1_trimmed/LD_NSKY1328-7-1-spore_NSK-1009_diploid_1.json"
+    conda:
+        "base"
+    shell:
+        "fastp --adapter_sequence CTGTCTCTTATACACATCT --disable_quality_filtering --disable_length_filtering --overrepresentation_analysis -i {input} -o {output.trimmed} -h {output.report_html} -j {output.report_json}"
